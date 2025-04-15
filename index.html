@@ -1,0 +1,94 @@
+
+<style>
+  /* Apply styles only to elements with the custom class */
+  .custom-details summary {
+    list-style: none;  /* Remove default dropdown triangle */
+    cursor: pointer;
+    font-weight: normal; /* Normal text weight */
+    display: inline-block;
+    padding: 5px 15px;
+    border: 2px dotted black; /* Dotted circle */
+    border-radius: 20px; /* Make it rounded */
+    text-align: center;
+    transition: color 0.3s ease-in-out; /* Smooth transition */
+  }
+
+  .custom-details summary:hover {
+    color: lightgray; /* Change text color on hover */
+  }
+
+  .custom-details summary::-webkit-details-marker {
+    display: none; /* Remove marker in WebKit (Chrome, Safari) */
+  }
+
+  /* Styling for the blockquote section */
+  .quote-content { 
+    border-left: 4px solid #ccc;
+    padding-left: 10px;
+    color: #555;
+    font-style: italic;
+  }
+
+  /* Style for nested details */
+  .quote-content details {
+    margin-top: 10px;
+  }
+
+  .quote-content summary {
+    font-weight: bold;
+    cursor: pointer;
+  }
+blockquote {
+    border-left: 3px solid #999;
+    padding-left: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    color: #444;
+    font-style: italic;
+    background: none;
+}
+
+blockquote a {
+    text-decoration: none;
+    font-style: normal;
+    color: #333;
+    border-bottom: 1px dotted #aaa;
+}
+
+blockquote a:hover {
+    color: #000;
+    border-bottom: 1px solid #555;
+}
+</style>
+
+<details class="custom-details">
+  <summary>+ Expand</summary>
+  <iframe src="pdfs/eco-green-p.pdf" width="100%" height="1000px" style="border:none"></iframe>
+
+  <blockquote class="quote-content">
+    <details>
+      <summary>Analysis</summary>
+        <p>In designing the scenery and costumes for any of Shakespeare’s plays, the first thing the artist has to settle is the best date for the drama. This should be determined by the general spirit of the play, more than by any actual historical references which may occur in it.  Most Hamlets I have seen were placed far too early.  Hamlet is essentially a scholar of the Revival of Learning; and if the allusion to the recent invasion of England by the Danes puts it back to the ninth century, the use of foils brings it down much later.  Once, however, that the date has been fixed, then the archæologist is to supply us with the facts which the artist is to convert into effects.</p>
+    </details>
+    <p>-- <a href="https://www.gutenberg.org/cache/epub/887/pg887-images.html#page221">The Truth of Masks 🎭</a></p>
+  </blockquote>
+</details>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const details = document.querySelector(".custom-details");
+    const summary = details.querySelector("summary");
+
+    details.addEventListener("toggle", function() {
+      summary.textContent = details.open ? "- Collapse" : "+ Expand";
+    });
+  });
+</script>
+
+<p></p>
+<p></p> 
+
+<blockquote>
+    <i>But in real life, sailors who insist on tearing holes in the ship because it’s “not the ocean” are the ones who drown first.</i><br>
+    — <a href="https://www.nytimes.com/2025/02/27/books/review/meltdown-duncan-mavin.html" target="_blank">Yours Truly & GPT-4o</a>
+</blockquote>
